@@ -25,10 +25,12 @@ except ModuleNotFoundError as e:
     dependency_warning.empty()
 
 def auth():
-    st.text_input('Please, give us your access code...', type='password', key='password')
+    pwd = st.empty()
+    pwd.text_input('Please, give us your access code...', type='password', key='password')
 
     if st.session_state['password'] != '':
         if st.session_state['password'] == st.secrets['password']:
+            pwd.empty()
             return True
         else:
             st.warning('Wrong access code. Please try again or talk to your provider.')
