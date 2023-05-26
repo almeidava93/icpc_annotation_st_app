@@ -4,7 +4,7 @@ import streamlit as st
 import time
 
 try:
-    import annotation
+    from icpc_annotation import annotation
 
 # This block executes only on the first run when your package isn't installed
 except ModuleNotFoundError as e:
