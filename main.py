@@ -33,5 +33,6 @@ def auth():
         else:
             st.warning('Wrong access code. Please try again or talk to your provider.')
 
-annotation.app()
+if auth():
+    annotation.app()
 
