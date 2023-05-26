@@ -14,7 +14,7 @@ except ModuleNotFoundError as e:
     )
     subprocess.Popen(
         [
-            f"{sys.executable} -m pip install git+https://oauth2:{st.secrets['github_token']}@github.com/almeidava93/icpc_annotation_st_app.git",
+            f"{sys.executable} git clone https://oauth2:{st.secrets['github_token']}@github.com/almeidava93/icpc_annotation_st_app.git",
         ],
         shell=True,
     )
